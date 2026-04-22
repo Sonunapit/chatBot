@@ -1,13 +1,11 @@
-import {io} from "socket.io-client";
-
-const App = () => {
-  const socket = io("http://localhost:3000")
-  socket.on("connect", () => {
-  console.log("Connected:", socket.id);
-});
+import ChatBox from "./components/ChatBox";
+ 
+function App() {
   return (
-    <div>App</div>
-  )
+    <div style={{ height: "100vh", width: "100vw", background: "#131314" }}>
+      <ChatBox />
+    </div>
+  );
 }
-
-export default App
+ 
+export default App;
